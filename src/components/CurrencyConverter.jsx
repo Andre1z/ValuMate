@@ -19,34 +19,41 @@ const CurrencyConverter = () => {
   }, [amount, fromCurrency, toCurrency]);
 
   return (
-    <div className="p-6 bg-white shadow-lg rounded-lg">
-      <h2 className="text-xl font-bold mb-4">Conversor de Divisas</h2>
+    <div className="p-6 bg-gray-50 shadow-lg rounded-lg">
+      <h2 className="text-xl font-bold mb-4 text-blue-600">Conversor de Divisas</h2>
 
       <div className="flex flex-col gap-4">
         <input
           type="number"
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
-          className="p-2 border rounded"
+          className="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
-        <select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)} className="p-2 border rounded">
+        <select
+          value={fromCurrency}
+          onChange={(e) => setFromCurrency(e.target.value)}
+          className="p-2 border rounded bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
           <option value="USD">USD - Dólar</option>
           <option value="EUR">EUR - Euro</option>
           <option value="JPY">JPY - Yen Japonés</option>
         </select>
 
-        <select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)} className="p-2 border rounded">
+        <select
+          value={toCurrency}
+          onChange={(e) => setToCurrency(e.target.value)}
+          className="p-2 border rounded bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
           <option value="USD">USD - Dólar</option>
           <option value="EUR">EUR - Euro</option>
           <option value="JPY">JPY - Yen Japonés</option>
         </select>
 
-        {convertedAmount && (
-          <p className="text-lg font-semibold">
-            {amount} {fromCurrency} equivale a <span className="text-blue-500">{convertedAmount} {toCurrency}</span>
-          </p>
-        )}
+        <p className="text-lg font-semibold">
+          {amount} {fromCurrency} equivale a{" "}
+          <span className="text-blue-500">{convertedAmount} {toCurrency}</span>
+        </p>
       </div>
     </div>
   );
