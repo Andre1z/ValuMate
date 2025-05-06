@@ -1,12 +1,58 @@
-# React + Vite
+ValuMate 💰⚖️  
+=============================  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Conversor de Divisas y Unidades 🚀  
+---------------------------------  
+Bienvenido a **ValuMate**, una aplicación web moderna y eficiente para convertir **monedas** y **unidades de medida** de manera rápida y precisa.  
 
-Currently, two official plugins are available:
+Características 📌  
+-----------------  
+✅ Conversión de Divisas: Soporte para USD, EUR, JPY, GBP, AUD, CAD, CHF, CNY, INR, RON y más.  
+✅ Conversión de Unidades: Longitud, peso y temperatura con opciones como kilómetros, gramos, libras y grados Celsius.  
+✅ Diseño moderno: Interfaz minimalista y responsiva con estilos optimizados.  
+✅ Alta precisión: Usa APIs para obtener tasas de cambio actualizadas.  
+✅ 100% responsive: Adaptado para móviles y pantallas grandes.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Instalación 🚀  
+--------------  
+Para ejecutar **ValuMate** en tu máquina local, sigue estos pasos:  
 
-## Expanding the ESLint configuration
+1. Clona el repositorio:  
+   git clone https://github.com/Andre1z/ValuMate.git  
+2. Accede al directorio:  
+   cd ValuMate  
+3. Instala dependencias:  
+   npm install  
+4. Inicia el servidor de desarrollo:  
+   npm run dev  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Tecnologías utilizadas 🛠️  
+-------------------------  
+- React.js ⚛️  
+- Tailwind CSS 🎨  
+- Vite ⚡  
+- API de tasas de cambio 🌍  
+
+Uso 🎯  
+-------  
+1. Selecciona la moneda o unidad de origen.  
+2. Elige la moneda o unidad de destino.  
+3. Ingresa el valor a convertir.  
+4. ¡Listo! Verás la conversión instantáneamente.  
+
+Contribuciones 👨‍💻  
+--------------------  
+Si deseas contribuir a **ValuMate**, sigue estos pasos:  
+
+1. Haz un fork del repositorio.  
+2. Crea una nueva rama (`git checkout -b feature-nueva`).  
+3. Realiza cambios y haz commit (`git commit -m "Descripción del cambio"`).  
+4. Envía un pull request y revisaremos tu contribución.  
+
+Licencia 📜  
+-----------  
+Este proyecto está bajo la licencia **MIT**, lo que significa que puedes usarlo libremente.  
+
+Contacto 💬  
+------------  
+Si tienes preguntas o sugerencias, abre un issue o contáctame en GitHub. ¡Espero tu feedback! 🚀  
