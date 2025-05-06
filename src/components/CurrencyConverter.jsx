@@ -1,5 +1,18 @@
 import React, { useState, useEffect } from "react";
 
+const currencyOptions = [
+  { code: "USD", name: "Dólar estadounidense" },
+  { code: "EUR", name: "Euro" },
+  { code: "JPY", name: "Yen japonés" },
+  { code: "GBP", name: "Libra esterlina" },
+  { code: "AUD", name: "Dólar australiano" },
+  { code: "CAD", name: "Dólar canadiense" },
+  { code: "CHF", name: "Franco suizo" },
+  { code: "CNY", name: "Yuan chino" },
+  { code: "INR", name: "Rupia india" },
+  { code: "RON", name: "Leu rumano" },
+];
+
 const CurrencyConverter = () => {
   const [amount, setAmount] = useState(1);
   const [fromCurrency, setFromCurrency] = useState("USD");
@@ -35,9 +48,11 @@ const CurrencyConverter = () => {
           onChange={(e) => setFromCurrency(e.target.value)}
           className="p-2 border rounded bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <option value="USD">USD - Dólar</option>
-          <option value="EUR">EUR - Euro</option>
-          <option value="JPY">JPY - Yen Japonés</option>
+          {currencyOptions.map((currency) => (
+            <option key={currency.code} value={currency.code}>
+              {currency.name} ({currency.code})
+            </option>
+          ))}
         </select>
 
         <select
@@ -45,15 +60,19 @@ const CurrencyConverter = () => {
           onChange={(e) => setToCurrency(e.target.value)}
           className="p-2 border rounded bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <option value="USD">USD - Dólar</option>
-          <option value="EUR">EUR - Euro</option>
-          <option value="JPY">JPY - Yen Japonés</option>
+          {currencyOptions.map((currency) => (
+            <option key={currency.code} value={currency.code}>
+              {currency.name} ({currency.code})
+            </option>
+          ))}
         </select>
 
-        <p className="text-lg font-semibold">
-          {amount} {fromCurrency} equivale a{" "}
-          <span className="text-blue-500">{convertedAmount} {toCurrency}</span>
-        </p>
+        {convertedAmount && (
+          <p className="text-lg font-semibold">
+            {amount} {fromCurrency} equivale a{" "}
+            <span className="text-blue-500">{convertedAmount} {toCurrency}</span>
+          </p>
+        )}
       </div>
     </div>
   );
